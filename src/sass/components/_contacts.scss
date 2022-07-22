@@ -1,6 +1,6 @@
 .contacts{
    @extend %section;
-    background: linear-gradient(to bottom, $primmaryWhiteColor 11%, $footerBgColor 20% 89%);
+    background: linear-gradient(to bottom, $primmaryWhiteColor 20%, $footerBgColor 20% 80%);
 }
 .container{
     @extend %container;
@@ -14,18 +14,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: 320px) and (max-width:767px){
+            justify-content: center;
+                align-items: center;
+                margin-bottom: 60px;
+                display: block;
+    }
 }
 
 .contacts__item{
-    border-radius: 24px;
+   /*-- border-radius: 24px;
     padding: 50px 31px;
     margin: auto;
     background-color: $primmaryWhiteColor;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1); --*/
 
+    width: 220px;
+        padding: 43px 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+    
+    @media screen and (min-width: 320px) and (max-width:767px){
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 43px 21px 43px 20px;
+         }
     &:not(:last-child) {
-    margin-bottom: 20px;
-    }
+            @media screen and (min-width: 320px) and (max-width:767px) {
+                margin-bottom: 20px;
+            }
+        }
+         
+    
+        @media screen and (min-width: 768px){
+            flex-basis: calc((100% - 60px) / 3);
+            margin-right: 20px;
+            padding: 40px 32px;
+        }
+
+         @media screen and (min-width: 1200px){
+            flex-basis: calc((100% - 60px) / 3);
+            margin-right: 30px;
+            padding: 51px 44px 62px 43px;
+
+        &:last-child {
+                margin-right: 0px;
+            }
+         }
 }
 
 .contacts__block{
@@ -46,15 +84,15 @@
     border-radius: 4px;
 }
 
-.mame__foodtruck{
-    width: 130px;
-    height: 19px;
+.name__foodtruck{
+    width: 138px;
+    height: 28px;
     background: $cardColor3;
     border-radius: 4px;
 }
 
-.contacts__place{
-    &::after {
+.contacts__place {
+&::after {
         content: "";
         display: block;
         width: 100%;
@@ -62,8 +100,9 @@
         background-color: #E1E1E1;
         margin-top: 30px;
         margin-bottom: 30px;
-     }
+    }
 }
+        
 
 .contacts__title {
     margin-bottom: 14px;
@@ -88,6 +127,12 @@
     line-height: 1.8;
     color: $greyTextColor;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: #D41443;
+    }
+    
 }
 .contacts__date {
     font-weight: 500;
@@ -102,4 +147,110 @@
     line-height: 1.8;
     color: $pinkTextColor;
 }
+.contacts__daysplace{
+&::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E1E1E1;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.button__contacts{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 54px;
+    
+    @media screen and (min-width: 320px) and (max-width:767px){
+        /*-- display: block;
+        justify-content: center;
+        text-align: center; --*/
+
+        flex-direction: column; 
+        align-items: center;
+        
+    }
+
+    @media screen and (min-width: 1200px){
+        margin-top: 86px;
+    }
+}
+
+.button__locat {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+
+    width: 161px;
+    height: 44px;
+
+    margin-left: 12px;
+
+    background-color: $primmaryRedColor;
+    border-radius: 22px;
+    border: none;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &.locat-franchise {
+        background-color: #ffffff;
+        color: #D41443;
+
+        &:hover,
+        &:focus {
+            background-color: $accentBtnColor;
+        }
+
+        &:focus {
+            outline: 1px solid #D41443;
+            outline-offset: 1px;
+        }
+    }
+
+    &.button__locat:hover,
+    &.button__locat:focus {
+        cursor: pointer;
+    }
+
+    &.button__locat:focus {
+        outline: 1px solid #D41443;
+        outline-offset: 1px;
+    }
+     @media screen and (min-width: 1200px){
+        .button__locat {
+                width: 198px;
+        
+                &.locat-franchise {
+                    width: 180px;
+                }
+            }
+        }
+}
+.location-icon {
+    stroke: #ffffff;
+    fill: $primmaryRedColor;
+    width: 14px;
+    height: 12px;
+    margin-left: 8px;
+
+    &.location-iconfran {
+        margin-left: 13px;
+        stroke: $primmaryRedColor;
+        fill: #ffffff;
+    }
+}
+
 
