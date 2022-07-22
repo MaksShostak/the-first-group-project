@@ -1,0 +1,103 @@
+.contacts{
+   @extend %section;
+    background: linear-gradient(to bottom, $primmaryWhiteColor 11%, $footerBgColor  89%);
+}
+.container{
+    @extend %container;
+}
+.visually-hidden{
+    @extend %visually-hidden;
+}
+.contacts__list{
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts__item{
+    border-radius: 24px;
+    padding: 50px 31px;
+    margin: auto;
+    background-color: $primmaryWhiteColor;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+    &:not(:last-child) {
+    margin-bottom: 20px;
+    }
+}
+
+.contacts__block{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.name__cafe{
+    width: 73px;
+    height: 28px;
+    background: $cardColor2;
+    border-radius: 4px;
+}
+
+.mame__foodtruck{
+    width: 130px;
+    height: 19px;
+    background: $cardColor3;
+    border-radius: 4px;
+}
+
+.contacts__place{
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E1E1E1;
+        margin-top: 30px;
+        margin-bottom: 30px;
+     }
+}
+
+.contacts__title {
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $primmaryBlackColor;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+}
+
+.contacts__text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+    color: $greyTextColor;
+    letter-spacing: 0.04em;
+}
+
+.contact__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.8;
+    color: $greyTextColor;
+    cursor: pointer;
+}
+.contacts__date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.8;
+    color: $primmaryBlackColor;
+    letter-spacing: 0.04em;
+}
+.contacts__time {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.8;
+    color: $pinkTextColor;
+}
