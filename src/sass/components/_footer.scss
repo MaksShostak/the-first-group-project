@@ -23,7 +23,7 @@
                  }
 
     }
-&__wrapper {
+&__slogan {
     
 
     @media screen and (max-width:767px) {
@@ -32,7 +32,8 @@
 
 }
 
-    &__text{
+    &__slogan--first{
+            display: block;
             margin: 0;
             font-family: $font-secondary;
             font-style: normal;
@@ -65,7 +66,7 @@
     }
 
 
-    &__span{
+    &__slogan--second{
         display: block;
             margin: 0;
             font-family: $font-secondary;
