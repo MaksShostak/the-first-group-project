@@ -1,6 +1,6 @@
 .contacts{
    @extend %section;
-    background: linear-gradient(to bottom, $primmaryWhiteColor 11%, $footerBgColor  89%);
+    background: linear-gradient(to bottom, $primmaryWhiteColor 11%, $footerBgColor 20% 89%);
 }
 .container{
     @extend %container;
@@ -9,6 +9,7 @@
     @extend %visually-hidden;
 }
 .contacts__list{
+    @extend %list;
     margin-bottom: 60px;
     display: flex;
     align-items: center;
@@ -101,3 +102,4 @@
     line-height: 1.8;
     color: $pinkTextColor;
 }
+
