@@ -1,7 +1,13 @@
 .arrow-btn{
-    display: block;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 26px;
     height: 26px;
+    border: none;
+    border-color: transparent;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: $primmaryWhiteColor;
+    cursor: pointer;
 }
