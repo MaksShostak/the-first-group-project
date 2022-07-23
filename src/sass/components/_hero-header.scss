@@ -1,3 +1,135 @@
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    
+    background-color: $hederBgcolor;
+
+
+    &__container {
+        height: 664px;
+        @extend %container;
+        background-image: url(/src/images/milkdesktop1x.png),url(/src/images/girldesktop1x.png), url(/src/images/icedesktop1x.png);
+        background-size: 213px, 304px, 534px;
+        background-repeat: no-repeat;
+        background-position: bottom 60px left ,bottom right, top 54px right 133px ;
+        
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        min-width: 160px;
+        padding: 14px 37px;
+
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: $primmaryRedColor;
+        background: $primmaryWhiteColor;
+        border: none;
+        border-radius: 22px;
+        cursor: pointer;
+        align-items: center;
+        text-align: center;
+
+    }
+}
+
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list{
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 35px ;
+        }
+    }
+    &__link{
+        text-decoration:none;
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: $primmaryWhiteColor;
+
+        &.active {
+                color: $primmaryRedColor;
+            }
+
+        
+            
+
+    }
+}
+
+.hero {
+
+    &__title {
+        max-width: 277px;
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 400;
+
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+    }
+    &__title--first{
+        font-size: 38px;
+        line-height: 1.15;
+        color: $primmaryWhiteColor;
+    }
+    &__title--second{
+        font-size: 58px;
+        line-height: 0.9;
+        color: $primmaryRedColor;
+
+    &__btn-list{
+        @extend %list;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__btn-item{
+        border-radius: 20px;
+        &:not(:last-child){
+            margin-right: 12px;
+
+
+        }
+
+    }
+    &__btn{
+        text-decoration: none;
+        padding: 11px 20px;
+    }
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .arrow-btn{
    
     display: flex;

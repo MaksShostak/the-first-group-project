@@ -1,52 +1,69 @@
-<section>
-  <header>
-    <div>
-      <div>
-        <a id="Home" href="./index.html">
-          <img src="./images/logo.svg" alt="logo icecream" width="200px"
+<header class="header">
+  <div class="header__container">
+    <div class="header__navigation-wrapper">
+      <nav class="navigation">
+        <a class="logo" id="Home" href="./index.html">
+          <img
+            class="logo__icon"
+            src="./images/logo.svg"
+            alt="logo icecream"
+            width="200px"
         /></a>
 
-        <nav>
-          <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About us</a></li>
-            <li><a href="#How it’s made?">How it’s made?</a></li>
-            <li><a href="#products">Our products</a></li>
-            <li><a href="#сontact">Contact</a></li>
-          </ul>
-        </nav>
-        <button type="button">Buy now</button>
-      </div>
-      <div>
-        <h1>
-          <span>ice cream made with</span>
-          <span>passion</span>
-        </h1>
-        <ul>
-          <li><a href="#Our products">Products</a></li>
-          <li><a href="#How it’s made?">How it’s made?</a></li>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link active" href="#home">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#about">About us</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#How-made">How it’s made?</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#products">Our products</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#сontact">Contact</a>
+          </li>
         </ul>
-      </div>
-      <div>
-        <p>
+
+        <button class="header__button" type="button">Buy now</button>
+      </nav>
+    </div>
+    <section class="hero">
+      <h1 class="hero__title">
+        <span class="hero__title--first">ice cream made with</span>
+        <span class="hero__title--second">passion</span>
+      </h1>
+      <ul class="hero__btn-list">
+        <li class="hero__btn-item">
+          <a class="hero__btn" href="#products">Products</a>
+        </li>
+        <li class="hero__btn-item">
+          <a class="hero__btn" href="#How-made">How it’s made?</a>
+        </li>
+      </ul>
+
+      <div class="card">
+        <p class="card__meta">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <button class="arrow-btn" type="button">
-          <svg class="arrow-icon" width="7px" height="7px">
+        <button class="card__btn arrow-btn" type="button">
+          <svg class="arrow-btn__arrow-icon" width="7px" height="7px">
             <use href="./images/symbol-defs.svg#icon-arrow-right-icon"></use>
           </svg>
         </button>
       </div>
-
-      <p>
-        <span>16</span>
-        <span>cafes</span>
+      <p class="points">
+        <span class="points__number">16</span>
+        <span class="points__name">cafes</span>
       </p>
-      <p>
-        <span>23</span>
-        <span>food trucks</span>
+      <p class="points">
+        <span class="points__number">23</span>
+        <span class="points__name">food trucks</span>
       </p>
-    </div>
-  </header>
-</section>
+    </section>
+  </div>
+</header>
