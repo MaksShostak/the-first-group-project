@@ -1,10 +1,20 @@
 .galery {
     background: linear-gradient(to bottom, $footerBgColor 27%, $primmaryWhiteColor 27% 73%);
 
+&__image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+   
+}
+
 @extend %section;
 
     &__container {
-        @extend %container
+        display: flex;
+        justify-content: center;
+      
     
         }
     }

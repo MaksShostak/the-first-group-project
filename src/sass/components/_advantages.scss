@@ -1,14 +1,7 @@
-
-ul,
-li {
-    list-style: none;
-    margin: 0;
-}
 .advantages {
+    @extend %section;
     background-color: $footerBgColor;
-    padding-bottom: 60px;
-    padding-top: 60px;
-
+  
 }
 
 .container {
@@ -16,48 +9,39 @@ li {
 }
 
 .advantages__list {
+    @extend %list;
+    @media screen and (max-width: 767px) {
+            margin-right: auto;
+        }
     
     @media screen and (min-width: 768px) {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     @media screen and (min-width: 1200px) {
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
     }
 }
 
 .advantages__item {
-// width: calc((100% - 60px)/3);
+
     @media screen and (max-width: 767px) {
         max-width: 200px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        width: 170px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 288px;
-    }
-
-    &:not(:last-child) {
-    @media screen and (max-width: 767px) {
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-right: 22px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        margin-right: 132px;
-    }
-}
-}
+ }
 
 .advantages__title {
+    margin: 0;
     font-family: $font-secondary;
     font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: $primmaryRedColor;
@@ -84,7 +68,7 @@ li {
         }
 }
 
-        .title-img1::before {
+    .title-img1::before {
             content: "";
             display: block;
             width: 50px;
@@ -93,11 +77,11 @@ li {
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            margin-top: 40px;
+            
             margin-bottom: 40px;
         }
 
-        .title-img2::before {
+    .title-img2::before {
         content: "";
         display: block;
         width: 50px;
@@ -106,11 +90,11 @@ li {
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        margin-top: 40px;
+        
         margin-bottom: 40px;
         }
 
-        .title-img3::before {
+    .title-img3::before {
         content: "";
         display: block;
         width: 50px;
@@ -119,16 +103,17 @@ li {
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        margin-top: 40px;
+       
         margin-bottom: 40px;
         }
 
 .advantages__paragraph {
+    font-family: $font-primary;
+    margin: 0;
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.02em;
-
     color: $primmaryBlackColor;
 
     @media screen and (max-width: 767px) {
@@ -140,11 +125,13 @@ li {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         font-size: 14px;
         line-height: 1.74;
+        max-width: 180px;
     }
 
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.76;
+        max-width: 288px;
     }
 }
 
