@@ -11,7 +11,9 @@
 .visually-hidden {
     @extend %visually-hidden;
 }
-
+.comments__list{
+    padding: 0;
+}
 .comments__item {
     margin-bottom: 30px;
     @extend %list;
@@ -61,6 +63,7 @@
             transparent 1px,
             transparent 31px);
     background-repeat: no-repeat;
+    margin: 0;
 
     
 }
@@ -85,6 +88,7 @@
     line-height: 1.86;
     text-align: center;
     color: #000000;
+    margin: 0;
 }
 
 
@@ -133,10 +137,12 @@
         padding: 0px 35px 0px 28px;
         font-size: 16px;
         line-height: 1.86;
+       
     }
 
     .comments__girl {
         font-size: 20px;
+        
     }
 }
 
@@ -148,7 +154,7 @@
     align-items: center;
     text-align: center;
     @extend %list;
-    margin-right: -40px;
+    //margin-right: -40px;
 
 
 }
