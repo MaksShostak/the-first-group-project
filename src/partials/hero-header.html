@@ -1,41 +1,51 @@
 <header class="header">
   <div class="header__container">
-    <div class="header__navigation-wrapper">
-      <nav class="navigation">
-        <a class="logo" id="Home" href="./index.html">
-          <img
-            class="logo__icon"
-            src="./images/logo.svg"
-            alt="logo icecream"
-            width="200px"
-        /></a>
+    <nav class="navigation">
+      <a class="logo" id="Home" href="./index.html">
+        <img
+          class="logo__icon"
+          src="./images/logo.svg"
+          alt="logo icecream"
+          width="200"
+      /></a>
 
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link active" href="#home">Home</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#about">About us</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#How-made">How it’s made?</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#products">Our products</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#сontact">Contact</a>
-          </li>
-        </ul>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link active" href="#home">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#about">About us</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#How-made">How it’s made?</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#products">Our products</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#сontact">Contact</a>
+        </li>
+      </ul>
+      <button class="header__button" type="button">Buy now</button>
+    </nav>
 
-        <button class="header__button" type="button">Buy now</button>
-      </nav>
-    </div>
     <section class="hero">
-      <h1 class="hero__title">
-        <span class="hero__title--first">ice cream made with</span>
-        <span class="hero__title--second">passion</span>
-      </h1>
+      <div class="hero__title-wrapper">
+        <h1 class="hero__title">
+          <span class="hero__title--first">ice cream made with</span>
+          <span class="hero__title--second">passion</span>
+        </h1>
+        <div class="hero__meta-wrapper">
+          <p class="hero__meta points">
+            <span class="points__number">16</span>
+            <span class="points__name">cafes</span>
+          </p>
+          <p class="hero__meta points">
+            <span class="points__number">23</span>
+            <span class="points__name">food trucks</span>
+          </p>
+        </div>
+      </div>
       <ul class="hero__btn-list">
         <li class="hero__btn-item">
           <a class="hero__btn" href="#products">Products</a>
@@ -56,14 +66,93 @@
           </svg>
         </button>
       </div>
-      <p class="points">
-        <span class="points__number">16</span>
-        <span class="points__name">cafes</span>
-      </p>
-      <p class="points">
-        <span class="points__number">23</span>
-        <span class="points__name">food trucks</span>
-      </p>
+
+      <picture>
+        <source
+          srcset="
+            /src/images/milkdesktop1x.png 1x,
+            /src/images/milkdesktop2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            /src/images/milktablet1x.png 1x,
+            /src/images/milktablet2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            /src/images/milktablet1x.png 1x,
+            /src/images/milktablet2x.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+
+        <img
+          class="milk__foto"
+          src="/src/images/milktablet1x.png"
+          alt="the picture shows a jug of milk"
+        />
+      </picture>
+      <picture>
+        <source
+          srcset="
+            /src/images/icedesktop1x.png 1x,
+            /src/images/icedesktop2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+
+        <source
+          srcset="
+            /src/images/icetablet1x.png 1x,
+            /src/images/icetablet2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/src/images/icemob1x.png 1x, /src/images/icemob2x.png 2x"
+          media="(min-width: 320px)"
+        />
+
+        <img
+          class="icecream__foto"
+          src="/src/images/icedesktop1x.png"
+          alt="the picture shows a large serving of ice cream in a cone"
+        />
+      </picture>
+      <picture>
+        <source
+          srcset="
+            /src/images/girldesktop1x.png 1x,
+            /src/images/girldesktop2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+
+        <source
+          srcset="
+            /src/images/girltablet1x.png 1x,
+            /src/images/girltablet2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            /src/images/girltablet1x.png 1x,
+            /src/images/girltablet2x.png 2x
+          "
+          media="(min-width: 320px)"
+        />
+
+        <img
+          class="girl__foto"
+          src="/src/images/girltablet1x.png"
+          alt="the picture shows a girl with ice cream"
+        />
+      </picture>
     </section>
   </div>
 </header>
