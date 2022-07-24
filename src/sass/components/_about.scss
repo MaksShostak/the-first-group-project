@@ -211,3 +211,37 @@
             }
     }
 }
+
+
+.about__btn{
+        background: #fff;
+        border-radius: 22px;
+        width: 176px;
+        height: 44px;
+        border: none;
+        font-family: DM Sans, sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d41443;
+        margin-left: 30px;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 6px;
+            height: 10px;
+            background-image: url(/src/images/arrow.svg);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            margin-left: 13px;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $accentBtnColor;
+        }
+}

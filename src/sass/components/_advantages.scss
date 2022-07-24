@@ -1,3 +1,4 @@
+
 ul,
 li {
     list-style: none;
@@ -5,7 +6,8 @@ li {
 }
 .advantages {
     background-color: $footerBgColor;
-    @extend %section;
+    padding-bottom: 60px;
+    padding-top: 60px;
 
 }
 
@@ -14,6 +16,7 @@ li {
 }
 
 .advantages__list {
+    
     @media screen and (min-width: 768px) {
         display: flex;
     }
@@ -24,7 +27,7 @@ li {
 }
 
 .advantages__item {
-
+// width: calc((100% - 60px)/3);
     @media screen and (max-width: 767px) {
         max-width: 200px;
     }
@@ -144,3 +147,4 @@ li {
         line-height: 1.76;
     }
 }
+
