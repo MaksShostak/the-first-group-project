@@ -1,0 +1,10 @@
+.galery {
+    background: linear-gradient(to bottom, $footerBgColor 27%, $primmaryWhiteColor 27% 73%);
+
+@extend %section;
+
+    &__container {
+        @extend %container
+    
+        }
+    }
