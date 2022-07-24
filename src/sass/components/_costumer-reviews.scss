@@ -1,0 +1,196 @@
+.comments {
+    @extend %section;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+}
+.container{
+    @extend %container;
+}
+
+.visually-hidden {
+    @extend %visually-hidden;
+}
+
+.comments__item {
+    margin-bottom: 30px;
+    @extend %list;
+
+}
+
+.photo__com {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+.comments__div {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 43px 50px 20px;
+    @extend %list;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 61px;
+        top: 28px;
+        width: 54px;
+        height: 40px;
+        background-image: url(/src/images/comments/“.svg);
+    }
+}
+
+.review {
+    position: relative;
+    padding: 0px 16px 0px 7px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+    color: #000000;
+    background-image: repeating-linear-gradient(to top,
+            #E1E1E1,
+            #E1E1E1 1px,
+            transparent 1px,
+            transparent 31px);
+    background-repeat: no-repeat;
+
+    
+}
+
+.element {
+  
+ &::after{
+    content:"";
+    display: block;
+    height: 4px;
+    background-image: url(/src/images/redpoints-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+}
+
+
+.comments__girl {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    text-align: center;
+    color: #000000;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .comments__div {
+        padding: 47px 36px 28px 60px;
+        width: 620px;
+
+        &::before {
+            top: 30px;
+            left: 40px;
+        }
+    }
+
+    .review {
+        padding: 0px 44px 0px 20px;
+        font-size: 14px;
+        line-height: 2.16;
+        letter-spacing: 0.04em;
+        background-image: repeating-linear-gradient(to top,
+                #E1E1E1,
+                #E1E1E1 1px,
+                transparent 1px,
+                transparent 30px);
+    }
+
+    .comments__girl {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .comments__div {
+        padding: 47px 54px 32px 59px;
+        width: 926px;
+
+        &::before {
+            top: 32px;
+            left: 50px;
+        }
+    }
+
+    .review {
+        padding: 0px 35px 0px 28px;
+        font-size: 16px;
+        line-height: 1.86;
+    }
+
+    .comments__girl {
+        font-size: 20px;
+    }
+}
+
+
+.combutton__list {
+    display: flex; 
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @extend %list;
+    margin-right: -40px;
+
+
+}
+
+.combutton__item {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 18px;
+
+    &:not(:last-child) {
+        margin-right: 18px;
+    } 
+    
+}
+
+.combutton {
+    outline: none;
+    border: transparent;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+   // display: flex;
+    //align-items: center;
+   // justify-content: center;
+
+}
+.combutton__one {
+    outline: none;
+    border: transparent;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    color: transparent;
+    background: transparent;
+    
+    
+} 
+
+.home__icon {
+    width: 12px;
+    height: 12px;
+    fill: #D41443;
+   
+} 

@@ -1,8 +1,332 @@
+.header {
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    background-color: $hederBgcolor;
+    @media screen and (min-width:768px) and (max-width:1199px){
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+
+    &__container {
+        @extend %container;
+        padding-bottom: 84px;
+        position: relative;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+        padding-bottom: 56px;
+        }
+
+        // height: 664px;
+        // background-image: url(/src/images/milkdesktop1x.png),url(/src/images/girldesktop1x.png), url(/src/images/icedesktop1x.png);
+        // background-size: 213px, 304px, 534px;
+        // background-repeat: no-repeat;
+        // background-position: bottom 60px left ,bottom right, top 54px right 133px ;
+        
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        min-width: 160px;
+        padding: 14px 37px;
+
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: $primmaryRedColor;
+        background: $primmaryWhiteColor;
+        border: none;
+        border-radius: 22px;
+        cursor: pointer;
+        align-items: center;
+        text-align: center;
+
+        &::after {
+            content: "";
+            width: 6px;
+            height: 10px;
+            margin-left: 13px;
+            background-image: url(/src/images/arrow.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            }
+
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: $accentBtnColor;
+        }
+
+    }
+}
+
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+            margin-bottom: 20px;
+        }
+
+
+
+    &__list{
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width:1199px) {
+               display: none;
+        
+            }
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 35px ;
+        }
+    }
+    &__link{
+        text-decoration:none;
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: $primmaryWhiteColor;
+
+        &.active {
+                color: $primmaryRedColor;
+            }
+
+        
+            
+
+    }
+}
+
+.hero {
+    &__title-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__meta-wrapper{
+        z-index: 1;
+    }
+    &__title {
+        max-width: 277px;
+        margin: 0;
+        margin-bottom: 24px;
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 400;
+
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            margin-bottom: 20px;
+            max-width: 162px;
+        }
+
+    }
+    &__title--first{
+        font-size: 38px;
+        line-height: 1.15;
+        color: $primmaryWhiteColor;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 22px;
+            line-height: 1.13;
+        }
+    }
+    &__title--second{
+        font-size: 58px;
+        line-height: 0.9;
+        color: $primmaryRedColor;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+                font-size: 34px;
+                line-height: 0.9;
+            }
+    
+    }
+
+    &__btn-list{
+        @extend %list;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 108px;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+                margin-bottom: 61px;
+            }
+    }
+    &__btn-item{
+        
+        border-radius: 20px;
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.28;
+
+        &:not(:last-child){
+        margin-right: 12px;
+        background-color: $primmaryRedColor;
+        color: $primmaryWhiteColor;
+       
+        }
+        &:last-child{
+            background-color: $primmaryWhiteColor;
+        color: $primmaryRedColor;
+        }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 8px;
+            line-height: 1.25;
+         }
+
+
+    }
+
+    &__btn{
+        display: block;
+        text-decoration: none;
+        padding: 11px 20px;
+        color: inherit;
+        text-align: center;
+        border-radius: 20px;
+
+
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: $accentBtnColor;
+            color: $primmaryRedColor;
+        }
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+        padding: 7px 14px;
+        }
+    }
+}
+
+.points {
+    position: relative;
+    margin: 0;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__number {
+        display: block;
+        margin-bottom: 2px;
+
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 1.15;
+
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: $primmaryRedColor;
+
+        &::before {
+            z-index: -2;
+            position: absolute;
+            right: -15px;
+            top: -5px;
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $primmaryWhiteColor;
+            // background-image: url(/src/images/round.svg);
+        }
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 28px;
+            line-height: 1.14;
+        }
+
+    }
+
+    &__name {
+        display: block;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.28;
+        text-align: right;
+
+        color: $primmaryWhiteColor;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 8px;
+            line-height: 1.25;
+        }
+    }
+}
+    
+.card{
+    margin-left: 213px;
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-left: 152px;
+        z-index: 3;
+    }
+    
+    
+    &__meta{
+        margin: 0;
+        z-index: 2;
+        max-width: 200px;
+        margin-bottom: 20px;
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+        color: $primmaryWhiteColor;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 8px;
+            line-height: 1.5;
+            max-width: 114px;
+           
+            
+            }
+
+
+        
+    }
+}
+
 .arrow-btn{
    
     display: flex;
     align-items: center;
     justify-content: center;
+    
+
     width: 26px;
     height: 26px;
     border: none;
@@ -10,4 +334,92 @@
     border-radius: 50%;
     background-color: $primmaryWhiteColor;
     cursor: pointer;
+    color: $primmaryRedColor;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $accentBtnColor;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+            width: 18px;
+            height: 18px;
+    }
+
+    &__arrow-icon{
+        fill: currentColor;
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+                width: 5px;
+                height: 5px;
+            }
+    }
 }
+
+
+.milk__foto{
+    position: absolute;
+    display: block;
+    height: auto;
+    
+    @media screen and (max-width:767px){
+        display: none;
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        left: 0;
+        bottom: 16px;
+        min-width: 152px;
+    }
+    @media screen and (min-width:1200px){
+        left: 0;
+        bottom: 60px;
+         min-width: 213px;
+    }
+}
+.icecream__foto{
+        position: absolute;
+        display: block;
+        height: auto;
+       
+        
+        
+        @media screen and (max-width:767px) {
+            left: 36;
+            bottom: 0;
+            min-width: 346px;
+        }
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            left: 248;
+            bottom: 0;
+            min-width: 335px;
+            z-index: -0.5;
+           
+        }
+
+        @media screen and (min-width:1200px) {
+            left: 517;
+            bottom: 0;
+            min-width: 534px;
+        }
+    }
+.girl__foto{
+        position: absolute;
+        display: block;
+        height: auto;
+       
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            right: 0;
+            bottom: 0;
+            min-width: 190px;
+            z-index: 1;
+        }
+        @media screen and (min-width:1200px) {
+            right: 0;
+            bottom: 0;
+            min-width: 304px;
+        }
+    }
