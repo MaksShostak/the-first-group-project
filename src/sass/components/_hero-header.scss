@@ -182,8 +182,8 @@
 
 
     }
-    &__title--first{
-       
+    &__title-span{
+        &:first-child{
         color: $primmaryWhiteColor;
 
         @media screen and (max-width:767px) {
@@ -199,30 +199,28 @@
             font-size: 38px;
             line-height: 1.15;
         }
-
-
-    }
-    &__title--second{
-        
+        }
+    &:last-child{
         color: $primmaryRedColor;
+        
         @media screen and (max-width:767px) {
-                font-size: 48px;
-                line-height: 0.96;
-        }
-
-        @media screen and (min-width:768px) and (max-width:1199px) {
-                font-size: 34px;
-                line-height: 0.9;
-        }
-        @media screen and (min-width:1200px) {
-                font-size: 58px;
-                line-height: 0.9;
+            font-size: 48px;
+                ine-height: 0.96;
         }
         
-    
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            font-size: 34px;
+            line-height: 0.9;
+        }
+        
+        @media screen and (min-width:1200px) {
+            font-size: 58px;
+            line-height: 0.9;
+        }
+        }
     }
 
-    &__btn-list{
+       &__btn-list{
         @extend %list;
         display: flex;
         align-items: center;
