@@ -8,7 +8,38 @@
           alt="logo icecream"
           width="200"
       /></a>
-
+      <button
+        class="header__mobile-menu"
+        is-open
+        type="button"
+        data-menu-button
+        aria-controls="navigation-menu"
+      >
+        <svg
+          class="mobile-menu__icon"
+          width="20px"
+          height="12px"
+          aria-label="switcher mobile menu"
+        >
+          <use href="/src/images/symbol-defs.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
+      <button
+        class="header__mobile-close"
+        is-open
+        type="button"
+        data-menu-button
+        aria-controls="close-menu"
+      >
+        <svg
+          class="mobile-close__icon"
+          width="14px"
+          height="14px"
+          aria-label="close mobile menu"
+        >
+          <use href="/src/images/symbol-defs.svg#icon-closebtn"></use>
+        </svg>
+      </button>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link active" href="#home">Home</a>
@@ -54,7 +85,6 @@
           <a class="hero__btn" href="#How-made">How it’s made?</a>
         </li>
       </ul>
-
       <div class="card">
         <p class="card__meta">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -87,7 +117,7 @@
             /src/images/milktablet1x.png 1x,
             /src/images/milktablet2x.png 2x
           "
-          media="(min-width: 320px)"
+          media="(max-width: 767px)"
         />
 
         <img
@@ -114,7 +144,7 @@
         />
         <source
           srcset="/src/images/icemob1x.png 1x, /src/images/icemob2x.png 2x"
-          media="(min-width: 320px)"
+          media="(max-width: 767px)"
         />
 
         <img
@@ -144,7 +174,7 @@
             /src/images/girltablet1x.png 1x,
             /src/images/girltablet2x.png 2x
           "
-          media="(min-width: 320px)"
+          media="(max-width: 767px)"
         />
 
         <img
