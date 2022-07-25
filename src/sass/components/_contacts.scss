@@ -2,7 +2,7 @@
    @extend %section;
     background: linear-gradient(to bottom, $primmaryWhiteColor 20%, $footerBgColor 20% 80%);
 }
-.container{
+.contacts__container{
     @extend %container;
 }
 .visually-hidden{
@@ -31,7 +31,7 @@
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1); --*/
 
         width: 220px;
-        padding: 43px 20px;
+        padding: 40px 32px;
         background-color: #ffffff;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
@@ -40,7 +40,8 @@
             max-width: 220px;
             margin-left: auto;
             margin-right: auto;
-            padding: 43px 21px 43px 20px;
+            padding: 40px 32px 40px 32px;
+            font-size: 12px;
          }
     &:not(:last-child) {
             @media screen and (max-width:767px) {
@@ -53,12 +54,14 @@
             flex-basis: calc((100% - 60px) / 3);
             margin-right: 20px;
             padding: 40px 32px;
+            font-size: 14px;
         }
 
          @media screen and (min-width: 1200px){
             flex-basis: calc((100% - 60px) / 3);
             margin-right: 30px;
             padding: 51px 44px 62px 43px;
+            font-size: 16px;
 
         &:last-child {
                 margin-right: 0px;
@@ -67,6 +70,7 @@
 }
 
 .contacts__block{
+    margin-top: 0;
     margin-bottom: 30px;
     text-transform: uppercase;
     color: #ffffff;
@@ -75,20 +79,34 @@
     line-height: 1.8;
     text-align: center;
     letter-spacing: 0.04em;
-}
+    @media screen and (max-width:767px) {
+        font-size: 12px;
+    }
 
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+    }
+
+}
 .name__cafe{
     width: 73px;
     height: 28px;
     background: $cardColor2;
     border-radius: 4px;
+    
 }
+
 
 .name__foodtruck{
     width: 138px;
     height: 28px;
     background: $cardColor3;
     border-radius: 4px;
+    
 }
 
 .contacts__place {
@@ -98,27 +116,52 @@
         width: 100%;
         height: 1px;
         background-color: #E1E1E1;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 0px;
+        margin-bottom: 32px;
     }
 }
         
 
 .contacts__title {
-    margin-bottom: 14px;
+    margin-top: 0;
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 14px;
     color: $primmaryBlackColor;
     line-height: 1.8;
     letter-spacing: 0.04em;
+    @media screen and (max-width:767px) {
+            font-size: 12px;
+        }
+    
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            font-size: 16px;
+        }
 }
 
 .contacts__text{
+    margin-top: 0;
+    margin-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.6;
     color: $greyTextColor;
     letter-spacing: 0.04em;
+    @media screen and (max-width:767px) {
+            font-size: 12px;
+        }
+    
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            font-size: 16px;
+        }
 }
 
 .contact__link {
@@ -132,21 +175,50 @@
     &:hover,
     &:focus {
         color: #D41443;
+        transition: background-color 400ms ease-in-out;
+        transition: color 400ms ease-in-out;
+        transition: border-color 400ms ease-in-out;
     }
     
 }
 .contacts__date {
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.8;
     color: $primmaryBlackColor;
     letter-spacing: 0.04em;
+    @media screen and (max-width:767px) {
+            font-size: 12px;
+        }
+    
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    
+    @media screen and (min-width: 1200px) {
+            font-size: 16px;
+        }
 }
 .contacts__time {
+    margin-top: 0;
+    margin-bottom: 12px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.8;
     color: $pinkTextColor;
+    @media screen and (max-width:767px) {
+            font-size: 12px;
+        }
+    
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            font-size: 16px;
+        }
 }
 .contacts__daysplace{
 &::after {
@@ -155,108 +227,106 @@
         width: 100%;
         height: 1px;
         background-color: #E1E1E1;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 32px;
+        margin-bottom: 32px;
     }
 }
 
 .button__contacts{
+    @extend %list;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 54px;
     
-    
-    @media screen and (max-width:767px){
-        /*-- display: block;
-        justify-content: center;
-        text-align: center; --*/
 
-        flex-direction: column; 
-        align-items: center;
-        
+    @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+}
+.butcon__item {
+    &:not(:last-child) {
+        @media screen and (min-width: 767px) {
+                margin-right: 15px;
+        }
+         @media screen and (max-width: 767px) {
+        margin-bottom: 10px;
+        //margin-right: 15px;
     }
 
-    @media screen and (min-width: 1200px){
-        margin-top: 86px;
-    }
+} 
 }
 
-.button__locat {  
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.3;
+.button__locat{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-
-    width: 161px;
-    height: 44px;
-
-    margin-left: 12px;
-
-    background-color: $primmaryRedColor;
-    border-radius: 22px;
+    min-width: 176px;
+    padding: 14px 37px;
     border: none;
-
-    &:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
-    &.locat-franchise {
-        background-color: #ffffff;
-        color: #D41443;
-
-        &:hover,
-        &:focus {
-            background-color: $accentBtnColor;
-        }
-
-        &:focus {
-            outline: 1px solid #D41443;
-            outline-offset: 1px;
-        }}
-   
+    border-radius: 22px;
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.13;
+    color: $primmaryWhiteColor;
+    background: $primmaryRedColor;
+    text-align: center;
+    &::after {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 12px;
+            background-image: url(/src/images/arroww.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-left: 13px;        
+    } 
+&:hover,
+&:focus,
+&:active{
+    background-color: $accentBtnColor;
+    color: #ffffff;
+    
+    transition: background-color 400ms ease-in-out;
+    transition: color 400ms ease-in-out;
+    transition: border-color 400ms ease-in-out;
+}
 }
 
-    .button__locat:hover,
-    .button__locat:focus {
-        cursor: pointer;
-        outline: 1px solid #D41443;
-        outline-offset: 1px;
-        background-color: #ECEBEB;
-        color: #D41443;
-    }
 
-    .button__locat:focus {
-         @media screen and (min-width: 1200px){
-        .button__locat {
-                width: 198px;
-        
-                &.locat-franchise {
-                    width: 180px;
-                }
-            }
-        }
-    }
-       
-.location-icon { 
-    stroke: #ffffff;
-        fill: $primmaryRedColor;
+.location-icon{
+    fill: $primmaryRedColor;
         width: 14px;
         height: 12px;
         margin-left: 8px;
-    
-        &.location-iconfran {
-            margin-left: 13px;
-            stroke: $primmaryRedColor;
-            fill: #ffffff;
- }}       
-    
+        
+}
 
 
+.locat-franchise{
+    color: $primmaryRedColor;
+    background: $primmaryWhiteColor;
+&::after{
+    content: "";
+        display: block;
+        width: 14px;
+        height: 12px;
+        background-image: url(/src/images/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-left: 13px;
+}
+&:hover,
+&:focus,
+&:active {
+    background-color: $accentBtnColor;
+    color: #D41443;
+
+    transition: background-color 400ms ease-in-out;
+    transition: color 400ms ease-in-out;
+    transition: border-color 400ms ease-in-out;
+} 
+}
