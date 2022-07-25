@@ -18,10 +18,7 @@
         padding-top: 40px;
     }
 
-
    
-
-
     &__container {
         @extend %container;
         
@@ -51,7 +48,37 @@
         // background-position: bottom 60px left ,bottom right, top 54px right 133px ;
         
     }
-    &__button{
+    &__button-menu {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $primmaryRedColor;
+    
+        @media screen and (max-width:767px) {
+            margin-left: auto;
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            display: block;
+            margin-left: auto;
+            margin-right: 32px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            display: none;
+        }}
+    
+    &__menu-icon {
+            stroke: currentColor;
+            transition: color 400ms ease-in-out;
+    
+            .header__button-menu:hover &,
+            .header__button-menu:focus & {
+                color: $primmaryWhiteColor;
+            }
+        }
+    
+    &__button-buy{
         display: flex;
         align-items: center;
         text-align: center;
@@ -222,7 +249,7 @@
         }
     }
 
-       &__btn-list{
+    &__btn-list{
         @extend %list;
         display: flex;
         align-items: center;
@@ -293,6 +320,79 @@
 
         @media screen and (max-width:1199px) {
         padding: 7px 14px;
+        }
+    }
+    &__milk-foto {
+        position: absolute;
+        display: block;
+        height: auto;
+    
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            left: 0;
+            bottom: 16px;
+            min-width: 152px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            left: 0;
+            bottom: 60px;
+            min-width: 213px;
+        }
+    }
+    &__icecream-foto {
+        position: absolute;
+        display: block;
+        height: auto;
+        max-width: 100%;
+    
+    
+    
+        @media screen and (max-width:767px) {
+            left: 36;
+            bottom: 0;
+            // max-width: 284px;
+    
+    
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            left: 248;
+            bottom: 0;
+            // min-width: 335px;
+    
+    
+        }
+    
+        @media screen and (min-width:1200px) {
+            left: 517;
+            bottom: 0;
+            // min-width: 534px;
+        }
+    }
+    &__girl-foto {
+        position: absolute;
+        display: block;
+        height: auto;
+    
+        @media screen and (max-width:767px) {
+            display: none;
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            right: 0;
+            bottom: 0;
+            min-width: 190px;
+            z-index: 1;
+        }
+    
+        @media screen and (min-width:1200px) {
+            right: 0;
+            bottom: 0;
+            min-width: 304px;
         }
     }
 }
@@ -381,6 +481,7 @@
     
     
     &__meta{
+        position: relative;
         margin: 0;
         z-index:2;
         max-width: 200px;
@@ -403,151 +504,187 @@
 
         
     }
-}
-
-.arrow-btn{
-   
+    &__btn{
     display: flex;
-    align-items: center;
-    justify-content: center;
-   
-
-    width: 26px;
-    height: 26px;
-    border: none;
-    border-color: transparent;
-    border-radius: 50%;
-    background-color: $primmaryWhiteColor;
-    cursor: pointer;
-    color: $primmaryRedColor;
-    transition: background-color 400ms ease-in-out;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: $accentBtnColor;
-    }
-
-    @media screen and (min-width:768px) and (max-width:1199px) {
+        align-items: center;
+        justify-content: center;
+    
+    
+        width: 26px;
+        height: 26px;
+        border: none;
+        border-color: transparent;
+        border-radius: 50%;
+        background-color: $primmaryWhiteColor;
+        cursor: pointer;
+        color: $primmaryRedColor;
+        transition: background-color 400ms ease-in-out;
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $accentBtnColor;
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1199px) {
             width: 18px;
             height: 18px;
+        }
     }
-
-    &__arrow-icon{
-        fill: currentColor;
-
-        @media screen and (min-width:768px) and (max-width:1199px) {
-                width: 5px;
-                height: 5px;
-            }
-    }
-}
-
-
-.milk__foto{
-    position: absolute;
-    display: block;
-    height: auto;
+    &__btn-icon{
+    fill: currentColor;
     
-    @media screen and (max-width:767px){
-        display: none;
-    }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        left: 0;
-        bottom: 16px;
-        min-width: 152px;
-    }
-    @media screen and (min-width:1200px){
-        left: 0;
-        bottom: 60px;
-         min-width: 213px;
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            width: 5px;
+            height: 5px;
+        }
     }
 }
-.icecream__foto{
-        position: absolute;
-        display: block;
-        height: auto;
-        max-width: 100%;
-       
+
+
+.mobile-menu{
+z-index: 4;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.1);
+opacity: 1;
+transition-property: opacity, visibility;
+transition-duration: 500ms;
+transition-timing-function: ease-in;
+overflow-y: scroll;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+
+&.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        overflow-y: scroll;
+.mobile-menu__navigation {
+        transform: translateX(100%)}
         
-        
-        @media screen and (max-width:767px) {
-            left: 36;
-            bottom: 0;
-            // max-width: 284px;
-            
-           
-        }
-        @media screen and (min-width:768px) and (max-width:1199px) {
-            left: 248;
-            bottom: 0;
-            // min-width: 335px;
-           
-           
-        }
-
-        @media screen and (min-width:1200px) {
-            left: 517;
-            bottom: 0;
-            // min-width: 534px;
-        }
-    }
-.girl__foto{
-        position: absolute;
-        display: block;
-        height: auto;
-       
-        @media screen and (max-width:767px) {
-            display: none;
-        }
-        @media screen and (min-width:768px) and (max-width:1199px) {
-            right: 0;
-            bottom: 0;
-            min-width: 190px;
-            z-index: 1;
-        }
-        @media screen and (min-width:1200px) {
-            right: 0;
-            bottom: 0;
-            min-width: 304px;
-        }
     }
 
-.header__mobile-menu{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+@media screen and (min-width:1200px) {
+   display: none;
+}
 
-    @media screen and (max-width:767px) {
-            margin-left: auto;
-        }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        display: block;
-        margin-left: auto;
-        margin-right: 32px;
-    }
-    @media screen and (min-width:1200px) {
-            display: none;
-        }
-
-}.header__mobile-close{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+&__navigation {
+   
+    position: fixed;
+    height: 100vh;
+    display: block;
+    max-width: 254px;
+    padding:20px;
+    top: 0;
+    right: 0;
+    margin-right: auto;
     margin-left: auto;
+    background-color: #E17992;
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    transform: translateX(0)
+    
+}
 
-    @media screen and (max-width:767px) {
-            display: none;
-        }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-            display: none;
-            margin-left: auto;
-           
+    &__button-close {
+        display: block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-left: auto;
+        transition: color 400ms ease-in-out;
+        margin-bottom: 24px;
+        color: $primmaryWhiteColor;
+        margin-left: auto;
+                
     }
 
-    @media screen and (min-width:1200px) {
-            display: none;
+    &__close-icon{
+        stroke: currentColor;
+        transition: color 400ms ease-in-out;
+        .mobile-menu__button-close:hover &,
+        .mobile-menu__button-close:focus & {
+        color: $primmaryRedColor;
         }
 
+    }
         
+    &__button-buy {
+
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        min-width: 186px;
+        padding: 14px 43px;
+        margin-bottom: 20px;
+    
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.31;
+        color: $primmaryRedColor;
+        background: $primmaryWhiteColor;
+        border: none;
+        border-radius: 22px;
+        cursor: pointer;
+    
+      
+        transition: background-color 400ms ease-in-out;
+
+        @media screen and (max-width:767px) {
+        min-width: 209px;
+        padding: 14px 48px;
+        margin-bottom: 20px;
+        }
+    
+        &::after {
+            content: "";
+            width: 6px;
+            height: 10px;
+            
+            background-image: url(/src/images/arrow.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $accentBtnColor;
+        }
+    }
+    
+    &__navigation-list{
+        @extend %list;
+
+       .navigation__item{
+        margin: 0;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #E18298;
+        &:first-child {
+            border-top: 1px solid #E18298;
+        }
+        
+       }
+       .navigation__link{
+        padding: 12px;
+        height: 42px;
+        flex-grow: 1;
+        }
+    }
 }
+
+
