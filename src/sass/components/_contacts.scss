@@ -77,11 +77,14 @@
     color: $primmaryWhiteColor;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.86;
     text-align: center;
     letter-spacing: 0.04em;
+    
     @media screen and (max-width:767px) {
         font-size: 12px;
+       
+
     }
 
     @media screen and (min-width: 768px) {
@@ -94,19 +97,35 @@
 
 }
 .name__cafe{
-    width: 73px;
+    text-align: center;
+   
+    width: 75px;
     height: 28px;
     background: $cardColor2;
     border-radius: 4px;
+    @media screen and (max-width:767px) {
+        width: 80px;
+            font-size: 12px;
+            height: 16px;
+    
+    }
     
 }
 
 
 .name__foodtruck{
+    text-align: center;
     width: 138px;
     height: 28px;
     background: $cardColor3;
     border-radius: 4px;
+    @media screen and (max-width:767px) {
+            
+        width: 130px;
+        font-size: 12px;
+            height: 16px;
+    
+        }
     
 }
 
