@@ -196,7 +196,8 @@
        
 
     &:hover,
-    &:focus {
+    &:focus,
+    :active {
         color: $primmaryRedColor;
         
     }
@@ -333,6 +334,8 @@
     background: $primmaryWhiteColor;
     cursor: pointer;
     min-width: 168px;
+    transition: background-color 400ms ease-in-out;
+
     &:hover,
     &:focus,
     &:active {
