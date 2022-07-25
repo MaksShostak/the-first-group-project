@@ -69,6 +69,7 @@
         cursor: pointer;
        
         text-align: center;
+        transition:background-color 400ms ease-in-out;
 
         &::after {
             content: "";
@@ -139,14 +140,15 @@
         font-size: 16px;
         line-height: 1.31;
         color: $primmaryWhiteColor;
+        transition: color 400ms ease-in-out;
 
-        &.active {
-                color: $primmaryRedColor;
-            }
+        &:hover,
+        &:focus,
+        &:active{
+            color: $primmaryRedColor;
+        }
 
         
-            
-
     }
 }
 
@@ -279,6 +281,7 @@
         color: inherit;
         text-align: center;
         border-radius: 20px;
+        transition: background-color 400ms ease-in-out, color 400ms ease-in-out ;
 
 
         &:hover,
@@ -417,6 +420,7 @@
     background-color: $primmaryWhiteColor;
     cursor: pointer;
     color: $primmaryRedColor;
+    transition: background-color 400ms ease-in-out;
 
     &:hover,
     &:focus,
