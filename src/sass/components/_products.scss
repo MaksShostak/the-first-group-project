@@ -441,6 +441,7 @@ border-radius: 50%;
 background-color: $primmaryWhiteColor;
 cursor: pointer;
 color: $primmaryRedColor;
+transition: background-color 400ms ease-in-out;
                 
 &:hover,
 &:focus,
