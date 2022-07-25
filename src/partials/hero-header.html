@@ -8,15 +8,9 @@
           alt="logo icecream"
           width="200"
       /></a>
-      <button
-        class="header__mobile-menu"
-        is-open
-        type="button"
-        data-menu-button
-        aria-controls="navigation-menu"
-      >
+      <button class="header__button-menu" data-modal-open type="button">
         <svg
-          class="mobile-menu__icon"
+          class="header__menu-icon"
           width="20px"
           height="12px"
           aria-label="switcher mobile menu"
@@ -24,22 +18,7 @@
           <use href="/src/images/symbol-defs.svg#icon-burger-menu"></use>
         </svg>
       </button>
-      <button
-        class="header__mobile-close"
-        is-open
-        type="button"
-        data-menu-button
-        aria-controls="close-menu"
-      >
-        <svg
-          class="mobile-close__icon"
-          width="14px"
-          height="14px"
-          aria-label="close mobile menu"
-        >
-          <use href="/src/images/symbol-defs.svg#icon-closebtn"></use>
-        </svg>
-      </button>
+
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="#home">Home</a>
@@ -57,7 +36,7 @@
           <a class="navigation__link" href="#сontact">Contact</a>
         </li>
       </ul>
-      <button class="header__button" type="button">Buy now</button>
+      <button class="header__button-buy" type="button">Buy now</button>
     </nav>
 
     <section class="hero">
@@ -91,7 +70,11 @@
           eiusmod tempor incididunt ut labore et
         </p>
         <button class="card__btn arrow-btn" type="button">
-          <svg class="arrow-btn__arrow-icon" width="7px" height="7px">
+          <svg
+            class="card__btn-icon arrow-btn__arrow-icon"
+            width="7px"
+            height="7px"
+          >
             <use href="./images/symbol-defs.svg#icon-arrow-right-icon"></use>
           </svg>
         </button>
@@ -121,7 +104,7 @@
         />
 
         <img
-          class="milk__foto"
+          class="hero__milk-foto"
           src="/src/images/milktablet1x.png"
           alt="the picture shows a jug of milk"
         />
@@ -148,7 +131,7 @@
         />
 
         <img
-          class="icecream__foto"
+          class="hero__icecream-foto"
           src="/src/images/icedesktop1x.png"
           alt="the picture shows a large serving of ice cream in a cone"
         />
@@ -178,11 +161,48 @@
         />
 
         <img
-          class="girl__foto"
+          class="hero__girl-foto"
           src="/src/images/girltablet1x.png"
           alt="the picture shows a girl with ice cream"
         />
       </picture>
+      <div class="mobile-menu is-hidden" data-modal>
+        <nav class="mobile-menu__navigation">
+          <button
+            class="mobile-menu__button-close"
+            data-modal-close
+            type="button"
+          >
+            <svg
+              class="mobile-menu__close-icon"
+              width="14px"
+              height="14px"
+              aria-label="close mobile menu"
+            >
+              <use href="/src/images/symbol-defs.svg#icon-closebtn"></use>
+            </svg>
+          </button>
+          <button class="mobile-menu__button-buy" type="button">Buy now</button>
+
+          <ul class="mobile-menu__navigation-list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#home">Home</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#about">About us</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#how-made">How it’s made?</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#products">Our products</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#сontact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </section>
   </div>
 </header>
