@@ -3,32 +3,17 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #ffffff;
-}
-.container{
+&__container{
     @extend %container;
 }
-
-.visually-hidden {
-    @extend %visually-hidden;
-}
-.comments__list{
+&__list{
     padding: 0;
-}
-.comments__item {
-    margin-bottom: 30px;
     @extend %list;
-
 }
-
-.photo__com {
-    margin: 0 auto;
+&__item {
     margin-bottom: 30px;
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
 }
-
-.comments__div {
+&__div {
     position: relative;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -48,6 +33,23 @@
         background-image: url(/src/images/comments/“.svg);
     }
 }
+}
+
+
+.visually-hidden {
+    @extend %visually-hidden;
+}
+
+.photo__com {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+
+
 
 .review {
     position: relative;
@@ -89,6 +91,7 @@
     text-align: center;
     color: #000000;
     margin: 0;
+    margin-top: 16px;
 }
 
 
@@ -146,57 +149,24 @@
     }
 }
 
-
-.combutton__list {
-    display: flex; 
-   
+.home{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    @extend %list;
-    //margin-right: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    &::after {
+            display: flex;
+            flex-grow: 1;
+            content: "";
+            height: 11px;
+            width: 12px;
+            background-image: url(/src/images/comments/hrdots.svg);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
 
-
-}
-
-.combutton__item {
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 18px;
-
-    &:not(:last-child) {
-        margin-right: 18px;
-    } 
-    
-}
-
-.combutton {
-    outline: none;
-    border: transparent;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-   // display: flex;
-    //align-items: center;
-   // justify-content: center;
-
-}
-.combutton__one {
-    outline: none;
-    border: transparent;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    color: transparent;
-    background: transparent;
-    
-    
+    }
 } 
 
-.home__icon {
-    width: 12px;
-    height: 12px;
-    fill: #D41443;
-   
-} 
+
