@@ -1,8 +1,11 @@
+.visually-hidden {
+    @extend %visually-hidden;
+}
 .comments {
     @extend %section;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #ffffff;
+    background-color: $primmaryWhiteColor;
 &__container{
     @extend %container;
 }
@@ -11,41 +14,88 @@
     @extend %list;
 }
 &__item {
-    margin-bottom: 30px;
+    margin: 0;
 }
 &__div {
     position: relative;
     margin: 0 auto;
-    margin-bottom: 30px;
+   
     width: 100%;
-    background-color: #FAFAFA;
-    padding: 43px 50px 20px;
-    @extend %list;
-
+    background-color: $greyBgColor;
+    @media screen and (max-width:767px) {
+        margin-bottom: 16px;
+        padding: 47px 54px 32px 59px;
+        }
+    
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-bottom: 0px;
+        padding: 37px 55px 44px 50px;
+            width: 620px;
+        
+        }
+    
+    @media screen and (min-width:1200px) {
+        margin-bottom: 16px;
+        padding: 32px 74px 31px 72px;
+        width: 926px;
+        }
+    
     &::before {
         content: "";
         display: block;
         position: absolute;
-        left: 61px;
-        top: 28px;
+        left: 50px;
+        top: 30px;
         width: 54px;
         height: 40px;
-        background-image: url(/src/images/comments/“.svg);
+        background-image: url(/src/images/“.svg);
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+        top: 20px;
+        left: 30px;
+        }
+        @media screen and (min-width:1200px) {
+        top: 20px;
+        left: 75px;
+        }
+    }
+}
+
+&__girl {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+    color: $primmaryBlackColor;
+    margin: 0;
+    margin-top: 16px;
+
+    @media screen and (min-width:768px) {
+        font-size: 14px;
+        line-height: 2.16;
+    }
+    @media screen and (min-width:1200px) {
+        font-size: 16px;
+        line-height: 1.86;
     }
 }
 }
 
-
-.visually-hidden {
-    @extend %visually-hidden;
-}
-
-.photo__com {
+.photo__wrapper {
     margin: 0 auto;
-    margin-bottom: 30px;
+    
     width: 85px;
     height: 85px;
     border-radius: 50%;
+    @media screen and (max-width:767px) {
+        margin-bottom: 32px;
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width:1200px) {
+        margin-bottom: 16px;
+    }
 }
 
 
@@ -58,17 +108,32 @@
     font-size: 12px;
     line-height: 2.55;
     text-align: center;
-    color: #000000;
+    color:$primmaryBlackColor;
     background-image: repeating-linear-gradient(to top,
-            #E1E1E1,
-            #E1E1E1 1px,
-            transparent 1px,
-            transparent 31px);
+    #E1E1E1,
+    #E1E1E1 1px,
+    transparent 1px,
+    transparent 31px);
     background-repeat: no-repeat;
     margin: 0;
+    @media screen and (min-width: 768px) {
+        padding: 0px 44px 0px 20px;
+        font-size: 14px;
+        line-height: 2.16;
+        letter-spacing: 0.04em;
+        background-image: repeating-linear-gradient(to top,
+        #E1E1E1,
+        #E1E1E1 1px,
+        transparent 1px,
+        transparent 30px);
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 0px 35px 0px 28px;
+        font-size: 16px;
+        line-height: 1.86;
+    }
 
-    
-}
+   }
 
 .element {
   
@@ -84,71 +149,6 @@
 }
 
 
-.comments__girl {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.86;
-    text-align: center;
-    color: #000000;
-    margin: 0;
-    margin-top: 16px;
-}
-
-
-
-@media screen and (min-width: 768px) {
-    .comments__div {
-        padding: 47px 36px 28px 60px;
-        width: 620px;
-
-        &::before {
-            top: 30px;
-            left: 40px;
-        }
-    }
-
-    .review {
-        padding: 0px 44px 0px 20px;
-        font-size: 14px;
-        line-height: 2.16;
-        letter-spacing: 0.04em;
-        background-image: repeating-linear-gradient(to top,
-                #E1E1E1,
-                #E1E1E1 1px,
-                transparent 1px,
-                transparent 30px);
-    }
-
-    .comments__girl {
-        font-size: 16px;
-    }
-
-}
-
-@media screen and (min-width: 1200px) {
-    .comments__div {
-        padding: 47px 54px 32px 59px;
-        width: 926px;
-
-        &::before {
-            top: 32px;
-            left: 50px;
-        }
-    }
-
-    .review {
-        padding: 0px 35px 0px 28px;
-        font-size: 16px;
-        line-height: 1.86;
-       
-    }
-
-    .comments__girl {
-        font-size: 20px;
-        
-    }
-}
-
 .home{
     display: flex;
     justify-content: center;
@@ -156,16 +156,19 @@
     margin-right: auto;
     margin-top: 32px;
     &::after {
-            display: flex;
-            flex-grow: 1;
-            content: "";
-            height: 11px;
-            width: 12px;
-            background-image: url(/src/images/comments/hrdots.svg);
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-position: center;
+        display: flex;
+        flex-grow: 1;
+        content: "";
+        height: 11px;
+        width: 12px;
+        background-image: url(/src/images/hrdots.svg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
 
+    }
+    @media screen and (max-width:767px) {
+        margin-top: 16px;
     }
 } 
 
