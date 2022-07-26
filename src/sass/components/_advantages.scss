@@ -71,6 +71,11 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and(min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: url(/src/images/icon-advantages12x.png);
+            }
         
             margin-bottom: 40px;
         }
@@ -84,6 +89,11 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and(min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: url(/src/images/icon-advantages22x.png);
+            }
         
             margin-bottom: 40px;
         }
@@ -97,6 +107,12 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and(min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+            background-image: url(/src/images/icon-advantages32x.png);
+            }
+
         
             margin-bottom: 40px;
         }
