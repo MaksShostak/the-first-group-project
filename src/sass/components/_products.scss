@@ -120,11 +120,11 @@
                 
             content: "";
             width: 100%;
-            height: 100%;
+            height: 280px;
                 
             background-image: url(/src/images/icecreammobile1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -144,11 +144,11 @@
                 
             content: "";
             width: 100%;
-            height: 100%;
+            height: 280px;
                 
             background-image: url(/src/images/icecoffeemobile1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -168,11 +168,11 @@
                 
             content: "";
             width: 100%;
-            height: 100%;
+            height: 280px;
                 
             background-image: url(/src/images/milkshakesmobile1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -200,12 +200,12 @@
             transform: translateY(-60%);
             
             content: "";
-            width: 224px;
+            width: 100%;
             height: 224px;
             
             background-image: url(/src/images/icecreamtablet1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -224,12 +224,12 @@
             transform: translateY(-60%);
             
             content: "";
-            width: 224px;
+            width: 100%;
             height: 224px;
             
             background-image: url(/src/images/icecoffeetablet1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -248,12 +248,12 @@
             transform: translateY(-60%);
             
             content: "";
-            width: 224px;
+            width: 100%;
             height: 224px;
             
             background-image: url(/src/images/milkshaketablet1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -282,12 +282,12 @@
             transform: translateY(-261px);
                 
                 content: "";
-            width: 368px;
+            width: 100%;
             height: 394px;
                 
             background-image: url(/src/images/icecreamdesktop1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -305,12 +305,12 @@
             transform: translateY(-261px);
                 
             content: "";
-            width: 368px;
+            width: 100%;
             height: 394px;
                 
             background-image: url(/src/images/icecoffeedesktop1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
@@ -328,12 +328,12 @@
             transform: translateY(-261px);
             
             content: "";
-            width: 368px;
+            width: 100%;
             height: 394px;
             
             background-image: url(/src/images/milkshakedesktop1x.png);
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: contain;
             background-position: center;
             @media screen and (min-device-pixel-ratio: 2),
             screen and(min-resolution: 192dpi),
